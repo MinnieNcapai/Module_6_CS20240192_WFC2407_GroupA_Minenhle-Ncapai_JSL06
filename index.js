@@ -71,9 +71,11 @@ function addToOrder(itemName) {
 
 
     // Update the text content of the order total element with the new total
-    orderTotalElement.textContent = `Total: $${totalPrice}`  
+    orderTotalElement.textContent = `Total: ${totalPrice}`  
 }
 
+
+  
 // Function to initialize the menu system
 function initMenuSystem(menu) {
     // Call the function to display menu items

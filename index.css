@@ -65,7 +65,15 @@ main {
     margin-bottom: 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease; /* Add this for the animation */
+    display: flex; /*Added this */
+    justify-content: space-between;
+    align-items: center;
 }
+
+#menu li:hover {
+    background-color: #8db8ea;
+}
+
 
 #order-total {
     font-weight: bold;
