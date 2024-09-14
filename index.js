@@ -9,7 +9,7 @@ const menu = {
 function displayMenuItems(menu) {
     // Get the menu container element from the HTML
     const menuContainer = document.getElementById("menu");
-}
+
       // Clear previous content
       menuContainer.innerHTML = '';
 
@@ -43,28 +43,41 @@ function displayMenuItems(menu) {
          itemsElement.appendChild(itemElement);
 
       }
-
-            
+   }           
 }
 
 // Callback function for adding an item to the order
+let order = [];
+let totalPrice = 0;
 function addToOrder(itemName) {
     // Get the order items list and the order total element from the HTML
+    const orderItemsList = document.getElementById("order-items");
+    const orderTotalElement = document.getElementById("order-total");
+    // Add the item to the order array
+    order.push(itemName);
 
     // Create a list item for the order
-
+    const orderItemElement = document.createElement("li");
+    
     // Set the text content of the list item to the item name
+    orderItemElement.textContent = itemName;
 
     // Append the list item to the order items list
+    orderItemsList.appendChild(orderItemElement);
 
     // Calculate and update the total price
+    const itemPrice = 10; 
+    totalPrice += itemPrice;
+
 
     // Update the text content of the order total element with the new total
+    orderTotalElement.textContent = `Total: $${totalPrice}`  
 }
 
 // Function to initialize the menu system
 function initMenuSystem(menu) {
     // Call the function to display menu items
+    displayMenuItems(menu);
 }
 
 // Start the menu system by calling the init function
